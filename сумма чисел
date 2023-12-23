@@ -3,14 +3,21 @@ internal class Program
     private static void Main(string[] args)
     {
         Random rand = new Random();
-        int number;
+        int number = rand.Next(0, 101);
+        int firstMultipleNumber = 3;
+        int secondMultipleNumber = 5;
+        int maxRandomNumber = 100;
+        int sumPositiveNumbers = 0;
 
-        number = rand.Next(0, 101);
-
-        for (int i = 0; i <= number; i += 3) 
+        for (int i = 0; i < maxRandomNumber; i++)
         {
-            Console.WriteLine(i);
-            Console.ReadKey();
+            if (i % firstMultipleNumber == 0 || i % secondMultipleNumber == 0)
+            {
+                sumPositiveNumbers += i;
+                Console.WriteLine($"Рандомные числа кратные {firstMultipleNumber} и {secondMultipleNumber} получились: {i}");
+            }
         }
+        Console.WriteLine($"Рандомное число: {number}. Сумма всех положительных чисел: {sumPositiveNumbers}.");
+        Console.ReadKey();
     }
 }
