@@ -3,6 +3,7 @@ internal class Program
     private static void Main(string[] args)
     {
         Random random = new Random();
+
         int firstMultipleNumber = 3;
         int secondMultipleNumber = 5;
         int minRandomNumber = 0;
