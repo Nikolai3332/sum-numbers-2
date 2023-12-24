@@ -2,12 +2,13 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Random rand = new Random();
-        int number = rand.Next(0, 101);
+        Random random = new Random();
         int firstMultipleNumber = 3;
         int secondMultipleNumber = 5;
-        int maxRandomNumber = 100;
+        int minRandomNumber = 0;
+        int maxRandomNumber = 101;
         int sumPositiveNumbers = 0;
+        int number = random.Next(minRandomNumber, maxRandomNumber);
 
         for (int i = 0; i < maxRandomNumber; i++)
         {
@@ -17,6 +18,7 @@ internal class Program
                 Console.WriteLine($"Рандомные числа кратные {firstMultipleNumber} и {secondMultipleNumber} получились: {i}");
             }
         }
+
         Console.WriteLine($"Рандомное число: {number}. Сумма всех положительных чисел: {sumPositiveNumbers}.");
         Console.ReadKey();
     }
